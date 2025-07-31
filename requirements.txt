@@ -1,0 +1,2 @@
+pytz
+jira[cli]
