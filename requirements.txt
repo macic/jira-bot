@@ -1,2 +1,3 @@
 pytz
 jira[cli]
+appeal

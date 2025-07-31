@@ -1,12 +1,11 @@
 import os
-
+from config import server, email, api_token
 from jira import JIRA
 from datetime import datetime
 from collections import defaultdict
 import pytz
 import sys
 from typing import List, Dict, Optional, Any
-import json
 
 class JiraStatusAnalyzer:
     # Define the expected status flow - updated with all CN project statuses
@@ -376,9 +375,9 @@ class JiraStatusAnalyzer:
 if __name__ == "__main__":
     # Initialize the analyzer
     analyzer = JiraStatusAnalyzer(
-        server='https://adverity.atlassian.net',
-        email='radoslaw.jeruzal@adverity.com',
-        api_token=os.environ.get('JIRA_API_TOKEN')
+        server=server,
+        email=email,
+        api_token=api_token
     )
 
     # Check for command line arguments
